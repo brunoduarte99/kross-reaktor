@@ -16,7 +16,7 @@
         <developer/>
     </developers>
     <modules>
-
+        <module>user-preferences</module>
     </modules>
 
   <properties>
