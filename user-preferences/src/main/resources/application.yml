@@ -1,7 +1,7 @@
 server:
   port: 9001
   servlet:
-    context-path: /krossreaktor
+    context-path: /kross-reaktor
 
 spring:
   application:

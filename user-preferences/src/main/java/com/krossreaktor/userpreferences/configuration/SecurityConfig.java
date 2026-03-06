@@ -20,7 +20,6 @@ public class SecurityConfig {
                     CorsConfiguration corsConfig = new CorsConfiguration();
                     corsConfig.setAllowedOriginPatterns(List.of(
                             "https://staging.icligo.com",
-                            "https://*.ngrok-free.app",
                             "http://localhost:*",
                             "http://127.0.0.1:*"
                     ));

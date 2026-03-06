@@ -27,7 +27,7 @@
         <url/>
     </scm>
     <properties>
-        <java.version>23</java.version>
+        <java.version>22</java.version>
         <temporal.version>1.23.2</temporal.version>
         <mapstruct.version>1.6.3</mapstruct.version>
         <uuidv7.version>6.1.1</uuidv7.version>
@@ -71,12 +71,6 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>${mapstruct.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.icligo</groupId>
-            <artifactId>common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -137,9 +131,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <source>23</source>
-                    <target>23</target>
-                    <release>23</release>
+                    <source>22</source>
+                    <target>22</target>
+                    <release>22</release>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
