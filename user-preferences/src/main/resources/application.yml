@@ -1,0 +1,32 @@
+server:
+  port: 9001
+  servlet:
+    context-path: /kross-reaktor
+
+spring:
+  application:
+    name: user-preferences
+  servlet:
+    multipart:
+      max-file-size: 60MB
+      max-request-size: 120MB
+  main:
+    banner-mode: off
+  logging:
+    level:
+      org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+  mongodb:
+    uri: mongodb://localhost:27018/kross-reaktor?authSource=admin&waitQueueMultiple=1000
+    database: kross-reaktor
+    auto-index-creation: true
+    uuid-representation: standard
+
+springdoc:
+  api-docs:
+    path: /api/v1/users-preferences/v3/api-docs
+  swagger-ui:
+    path: /api/v1/users-preferences/swagger-ui.html
+    operationsSorter: method
+    tagsSorter: alpha
+    display-request-duration: true
+    doc-expansion: none
