@@ -1,5 +1,7 @@
-package com.krossreaktor.userpreferences.dtos;
+package com.krossreaktor.userpreferences.dtos.tableDefinition;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,7 +13,9 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class TableDefinitionResponseDto {
+public class TableDefinitionRequestDto {
+    @NotBlank
     private String tableId;
+    @NotEmpty
     private List<String> columnKeys;
 }

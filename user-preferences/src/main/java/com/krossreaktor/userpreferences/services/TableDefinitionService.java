@@ -1,7 +1,7 @@
 package com.krossreaktor.userpreferences.services;
 
-import com.krossreaktor.userpreferences.dtos.TableDefinitionRequestDto;
-import com.krossreaktor.userpreferences.dtos.TableDefinitionResponseDto;
+import com.krossreaktor.userpreferences.dtos.tableDefinition.TableDefinitionRequestDto;
+import com.krossreaktor.userpreferences.dtos.tableDefinition.TableDefinitionResponseDto;
 import com.krossreaktor.userpreferences.exceptions.BadRequestException;
 import com.krossreaktor.userpreferences.exceptions.NotFoundException;
 import com.krossreaktor.userpreferences.models.TableDefinition;

@@ -1,7 +1,7 @@
 package com.krossreaktor.userpreferences.controllers;
 
-import com.krossreaktor.userpreferences.dtos.TableDefinitionRequestDto;
-import com.krossreaktor.userpreferences.dtos.TableDefinitionResponseDto;
+import com.krossreaktor.userpreferences.dtos.tableDefinition.TableDefinitionRequestDto;
+import com.krossreaktor.userpreferences.dtos.tableDefinition.TableDefinitionResponseDto;
 import com.krossreaktor.userpreferences.services.TableDefinitionService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
