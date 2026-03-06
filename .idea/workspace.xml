@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fedacf8e-9f72-4a66-ab93-9fd118f1e84c" name="Changes" comment="feat: Implemented column configuration">
+      <change afterPath="$PROJECT_DIR$/user-preferences/src/main/java/com/krossreaktor/userpreferences/controllers/FilterGroupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-preferences/src/main/java/com/krossreaktor/userpreferences/dtos/filterGroup/FilterGroupDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-preferences/src/main/java/com/krossreaktor/userpreferences/dtos/filterGroup/FilterGroupRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-preferences/src/main/java/com/krossreaktor/userpreferences/models/FilterGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-preferences/src/main/java/com/krossreaktor/userpreferences/models/FilterGroupConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-preferences/src/main/java/com/krossreaktor/userpreferences/repositories/FilterGroupConfigRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-preferences/src/main/java/com/krossreaktor/userpreferences/services/FilterGroupService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Exception" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="3AZ6vIqlXNls2yWB9RvL3jgg4OF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.UserPreferences.executor": "Run",
+    "Maven.kross-reaktor [install].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.UserPreferencesApplication.executor": "Run",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "dev",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="UserPreferencesApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.UserPreferencesApplication">
+    <configuration name="UserPreferences" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-23" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.krossreaktor.userpreferences.UserPreferencesApplication" />
+      <module name="user-preferences" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserPreferencesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-preferences" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.krossreaktor.userpreferences.UserPreferencesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fedacf8e-9f72-4a66-ab93-9fd118f1e84c" name="Changes" comment="" />
+      <created>1772787975107</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1772787975107</updated>
+      <workItem from="1772787976170" duration="18843000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: initial config for user preferences and structure for table definitions">
+      <option name="closed" value="true" />
+      <created>1772791182095</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1772791182095</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chore: point database to right connection">
+      <option name="closed" value="true" />
+      <created>1772791792828</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1772791792828</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: Implemented table basic crud to manage existing tables">
+      <option name="closed" value="true" />
+      <created>1772799080240</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1772799080240</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chore: path updated">
+      <option name="closed" value="true" />
+      <created>1772799238719</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772799238719</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chore: Add MongoConfig.java">
+      <option name="closed" value="true" />
+      <created>1772803030241</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1772803030241</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: Implemented column configuration">
+      <option name="closed" value="true" />
+      <created>1772803055206</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772803055206</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: initial config for user preferences and structure for table definitions" />
+    <MESSAGE value="chore: point database to right connection" />
+    <MESSAGE value="feat: Implemented table basic crud to manage existing tables" />
+    <MESSAGE value="chore: path updated" />
+    <MESSAGE value="chore: Add MongoConfig.java" />
+    <MESSAGE value="feat: Implemented column configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Implemented column configuration" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
