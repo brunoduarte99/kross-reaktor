@@ -1,0 +1,288 @@
+{
+  "info": {
+    "_postman_id": "e8478f80-b9ce-4f07-9bd5-05534a931415",
+    "name": "Kross-Reaktor | User Preferences",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Table Definitions",
+      "item": [
+        {
+          "name": "/api/v1/tables",
+          "id": "2e10e5d0-c958-4df2-a06a-d08d0929045a",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/v1/user-preferences/tables",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user-preferences",
+                "tables"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/v1/user-preferences/tables/{{tableId}}",
+          "id": "f84c3fd0-1559-41d4-a816-05e7d4225292",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"tableId\": \"ops-reaktor:bookings\",\n    \"columnKeys\": [\n        \"internalId\",\n        \"externalId\",\n        \"bookingProductType\",\n        \"bookingState\",\n        \"bookingDate\",\n        \"checkingDate\",\n        \"checkoutDate\",\n        \"consultantName\",\n        \"clientName\",\n        \"pvpValue\",\n        \"netValue\",\n        \"pointsCommissions\",\n        \"distributionChannel\",\n        \"paymentState\",\n        \"documentationSent\"\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/v1/user-preferences/tables/{{tableId}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user-preferences",
+                "tables",
+                "{{tableId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/v1/user-preferences/tables",
+          "id": "97c1ad8a-eb98-483a-8021-17bc0747b504",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/v1/user-preferences/tables",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user-preferences",
+                "tables"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/v1/user-preferences/tables/{{tableId}}",
+          "id": "de4fce21-4795-4043-a9e4-d73905c97e00",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/v1/user-preferences/tables/{{tableId}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user-preferences",
+                "tables",
+                "{{tableId}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "c5ab5634-148d-4847-afb8-de396fa7d1b0",
+      "description": "# User Preferences API\n\n## Base URL\n\n`http://localhost:9001/kross-reaktor`\n\n---\n\n## Table Definitions\n\n### Get all table definitions\n\n**GET** `/api/v1/user-preferences/tables`\n\n---\n\n### Get a table definition by ID\n\n**GET** `/api/v1/user-preferences/tables/{tableId}`\n\n#### Path Parameters\n\n| Parameter | Type | Required | Description |\n| --- | --- | --- | --- |\n| tableId | String | Yes | The table ID (e.g. `bookings`) |\n\n---\n\n### Create a table definition\n\n**POST** `/api/v1/user-preferences/tables`\n\n#### Request Body\n\n``` json\n{\n    \"tableId\": \"ops-reaktor:bookings\",\n    \"columnKeys\": [\n        \"internalId\",\n        \"externalId\",\n        \"bookingProductType\",\n        \"bookingState\",\n        \"bookingDate\",\n        \"checkingDate\",\n        \"checkoutDate\",\n        \"consultantName\",\n        \"clientName\",\n        \"pvpValue\",\n        \"netValue\",\n        \"pointsCommissions\",\n        \"distributionChannel\",\n        \"paymentState\",\n        \"documentationSent\"\n    ]\n}\n\n ```\n\n#### Examples\n\n**Ops-Reaktor: Consultants**\n\n``` json\n{\n    \"tableId\": \"ops-reaktor:consultants\",\n    \"columnKeys\": [\n        \"name\",\n        \"contacts\",\n        \"level\",\n        \"registerDate\",\n        \"accountStatus\",\n        \"commissionsStatus\",\n        \"upline\"\n    ]\n}\n\n ```\n\n**Ops-Reaktor: Bookings**\n\n``` json\n{\n    \"tableId\": \"ops-reaktor:bookings\",\n    \"columnKeys\": [\n        \"internalId\",\n        \"externalId\",\n        \"bookingProductType\",\n        \"bookingState\",\n        \"bookingDate\",\n        \"checkingDate\",\n        \"checkoutDate\",\n        \"consultantName\",\n        \"clientName\",\n        \"pvpValue\",\n        \"netValue\",\n        \"pointsCommissions\",\n        \"distributionChannel\",\n        \"paymentState\",\n        \"documentationSent\"\n    ]\n}\n\n ```\n\n**Ops-Reaktor: Refunds**\n\n``` json\n{\n    \"tableId\": \"ops-reaktor:refunds\",\n    \"columnKeys\": [\n        \"ids\",\n        \"saleSource\",\n        \"state\",\n        \"clientDetails\",\n        \"clientIban\",\n        \"refundValue\"\n    ]\n}\n\n ```\n\n**Ops-Reaktor: Payments**\n\n``` json\n{\n    \"tableId\": \"ops-reaktor:payments\",\n    \"columnKeys\": [\n        \"ids\",\n        \"saleSource\",\n        \"state\",\n        \"partnerDetails\",\n        \"checkinDate\",\n        \"accountBalance\",\n        \"pendingValue\",\n        \"paidValue\"\n    ]\n}\n\n ```\n\n---\n\n### Update a table definition\n\n**PUT** `/api/v1/user-preferences/tables/{tableId}`\n\n#### Path Parameters\n\n| Parameter | Type | Required | Description |\n| --- | --- | --- | --- |\n| tableId | String | Yes | The table ID (e.g. `bookings`) |\n\n#### Request Body\n\n``` json\n{\n    \"tableId\": \"ops-reaktor:bookings\",\n    \"columnKeys\": [\n        \"internalId\",\n        \"externalId\",\n        \"bookingProductType\"\n    ]\n}\n\n ```\n\n---\n\n### Delete a table definition\n\n**DELETE** `/api/v1/user-preferences/tables/{tableId}`\n\n#### Path Parameters\n\n| Parameter | Type | Required | Description |\n| --- | --- | --- | --- |\n| tableId | String | Yes | The table ID (e.g. `bookings`) |"
+    },
+    {
+      "name": "Column Config",
+      "item": [
+        {
+          "name": "/api/v1/user-preferences/column-config/{{userId}}/{{tableId}}",
+          "id": "1f9c12ce-1dae-4d38-ba0b-abb64e6961d7",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/v1/user-preferences/column-config/{{userId}}/{{tableId}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user-preferences",
+                "column-config",
+                "{{userId}}",
+                "{{tableId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/v1/user-preferences/column-config/{{userId}}",
+          "id": "3b711b4f-241a-405d-8a16-2f8e4173fe6e",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/v1/user-preferences/column-config/{{userId}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user-preferences",
+                "column-config",
+                "{{userId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/v1/user-preferences/column-config/{{userId}}/{{tableId}}",
+          "id": "5f81fabf-9e16-4f51-babd-86cb4319ee7c",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n    { \"columnKey\": \"bookingProductType\", \"visible\": true },\n    { \"columnKey\": \"bookingState\", \"visible\": true },\n    { \"columnKey\": \"bookingDate\", \"visible\": true },\n    { \"columnKey\": \"checkingDate\", \"visible\": false },\n    { \"columnKey\": \"checkoutDate\", \"visible\": false },\n    { \"columnKey\": \"consultantName\", \"visible\": true },\n    { \"columnKey\": \"clientName\", \"visible\": true },\n    { \"columnKey\": \"pvpValue\", \"visible\": true },\n    { \"columnKey\": \"netValue\", \"visible\": false },\n    { \"columnKey\": \"pointsCommissions\", \"visible\": false },\n    { \"columnKey\": \"distributionChannel\", \"visible\": true },\n    { \"columnKey\": \"internalId\", \"visible\": true },\n    { \"columnKey\": \"externalId\", \"visible\": true },\n    { \"columnKey\": \"paymentState\", \"visible\": true },\n    { \"columnKey\": \"documentationSent\", \"visible\": false }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/v1/user-preferences/column-config/{{userId}}/{{tableId}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user-preferences",
+                "column-config",
+                "{{userId}}",
+                "{{tableId}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "05d9f498-b97e-4a98-b0b2-ca8375d717fd",
+      "description": "## Column Config\n\n### Get column configuration for a specific table\n\n**GET** `/api/v1/user-preferences/column-config/{userId}/{tableId}`\n\n#### Path Parameters\n\n| Parameter | Type | Required | Description |\n| --- | --- | --- | --- |\n| userId | UUID | Yes | The user ID |\n| tableId | String | Yes | The table ID (e.g. `ops-reaktor:bookings`) |\n\n#### Example\n\n`GET /api/v1/user-preferences/column-config/b67749a7-5e36-4a35-aa7f-a24df6f7a85d/ops-reaktor:bookings`\n\n---\n\n### Get all column configurations for a user\n\n**GET** `/api/v1/user-preferences/column-config/{userId}`\n\n#### Path Parameters\n\n| Parameter | Type | Required | Description |\n| --- | --- | --- | --- |\n| userId | UUID | Yes | The user ID |\n\n#### Example\n\n`GET /api/v1/user-preferences/column-config/b67749a7-5e36-4a35-aa7f-a24df6f7a85d`\n\n---\n\n### Update column configuration for a specific table\n\n**PATCH** `/api/v1/user-preferences/column-config/{userId}/{tableId}`\n\n#### Path Parameters\n\n| Parameter | Type | Required | Description |\n| --- | --- | --- | --- |\n| userId | UUID | Yes | The user ID |\n| tableId | String | Yes | The table ID (e.g. `ops-reaktor:bookings`) |\n\n#### Request Body\n\n**Consultants**\n\n``` json\n[\n    { \"columnKey\": \"name\", \"visible\": true },\n    { \"columnKey\": \"contacts\", \"visible\": true },\n    { \"columnKey\": \"level\", \"visible\": false },\n    { \"columnKey\": \"registerDate\", \"visible\": true },\n    { \"columnKey\": \"accountStatus\", \"visible\": true },\n    { \"columnKey\": \"commissionsStatus\", \"visible\": false },\n    { \"columnKey\": \"upline\", \"visible\": true }\n]\n\n ```\n\n**Bookings**\n\n``` json\n[\n    { \"columnKey\": \"internalId\", \"visible\": true },\n    { \"columnKey\": \"externalId\", \"visible\": true },\n    { \"columnKey\": \"bookingProductType\", \"visible\": true },\n    { \"columnKey\": \"bookingState\", \"visible\": true },\n    { \"columnKey\": \"bookingDate\", \"visible\": true },\n    { \"columnKey\": \"checkingDate\", \"visible\": false },\n    { \"columnKey\": \"checkoutDate\", \"visible\": false },\n    { \"columnKey\": \"consultantName\", \"visible\": true },\n    { \"columnKey\": \"clientName\", \"visible\": true },\n    { \"columnKey\": \"pvpValue\", \"visible\": true },\n    { \"columnKey\": \"netValue\", \"visible\": false },\n    { \"columnKey\": \"pointsCommissions\", \"visible\": false },\n    { \"columnKey\": \"distributionChannel\", \"visible\": true },\n    { \"columnKey\": \"paymentState\", \"visible\": true },\n    { \"columnKey\": \"documentationSent\", \"visible\": false }\n]\n\n ```\n\n**Refunds**\n\n``` json\n[\n    { \"columnKey\": \"ids\", \"visible\": true },\n    { \"columnKey\": \"saleSource\", \"visible\": true },\n    { \"columnKey\": \"state\", \"visible\": true },\n    { \"columnKey\": \"clientDetails\", \"visible\": true },\n    { \"columnKey\": \"clientIban\", \"visible\": false },\n    { \"columnKey\": \"refundValue\", \"visible\": true }\n]\n\n ```\n\n**Payments**\n\n``` json\n[\n    { \"columnKey\": \"ids\", \"visible\": true },\n    { \"columnKey\": \"saleSource\", \"visible\": true },\n    { \"columnKey\": \"state\", \"visible\": true },\n    { \"columnKey\": \"partnerDetails\", \"visible\": true },\n    { \"columnKey\": \"checkinDate\", \"visible\": true },\n    { \"columnKey\": \"accountBalance\", \"visible\": false },\n    { \"columnKey\": \"pendingValue\", \"visible\": true },\n    { \"columnKey\": \"paidValue\", \"visible\": true }\n]\n\n ```"
+    },
+    {
+      "name": "Filter Groups",
+      "item": [
+        {
+          "name": "/api/v1/user-preferences/filter-groups/{{userId}}/{{tableId}}",
+          "id": "dc7cf7a4-3ba2-451e-960c-5d7e83907d81",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/v1/user-preferences/filter-groups/{{userId}}/{{tableId}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user-preferences",
+                "filter-groups",
+                "{{userId}}",
+                "{{tableId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/v1/user-preferences/filter-groups/{{userId}}/{{tableId}}",
+          "id": "870f51ed-53a6-4cf7-a3d8-aaed620d8214",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Alice's bookings this month\",\n    \"filters\": {\n        \"consultantName\": \"Alice Miranda\",\n        \"bookingDateStart\": \"2026-03-01\",\n        \"bookingDateEnd\": \"2026-03-31\"\n    }\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/v1/user-preferences/filter-groups/{{userId}}/{{tableId}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user-preferences",
+                "filter-groups",
+                "{{userId}}",
+                "{{tableId}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "02b51cf2-ab10-4303-a4dc-afb524e8da9d",
+      "description": "## Filter Groups\n\n### Get all filter groups for a user and table\n\n**GET** `/api/v1/user-preferences/filter-groups/{userId}/{tableId}`\n\n#### Path Parameters\n\n| Parameter | Type | Required | Description |\n| --- | --- | --- | --- |\n| userId | UUID | Yes | The user ID |\n| tableId | String | Yes | The table ID (e.g. `ops-reaktor:bookings`) |\n\n#### Example\n\n`GET /api/v1/user-preferences/filter-groups/b67749a7-5e36-4a35-aa7f-a24df6f7a85d/ops-reaktor:bookings`\n\n---\n\n### Create a filter group\n\n**POST** `/api/v1/user-preferences/filter-groups/{userId}/{tableId}`\n\n#### Path Parameters\n\n| Parameter | Type | Required | Description |\n| --- | --- | --- | --- |\n| userId | UUID | Yes | The user ID |\n| tableId | String | Yes | The table ID (e.g. `ops-reaktor:bookings`) |\n\n#### Examples\n\n**Bookings - Confirmed last 10 days**\n\n``` json\n{\n    \"name\": \"Confirmed last 10 days\",\n    \"filters\": {\n        \"bookingState\": \"CONFIRMED\",\n        \"bookingDateStart\": \"2026-02-24\",\n        \"bookingDateEnd\": \"2026-03-06\"\n    }\n}\n\n ```\n\n**Bookings - Pending flight + hotel**\n\n``` json\n{\n    \"name\": \"Pending flight + hotel\",\n    \"filters\": {\n        \"bookingState\": \"PENDING_APPROVAL\",\n        \"productType\": \"FLIGHT_HOTEL\",\n        \"pvpValueStart\": 1000,\n        \"pvpValueEnd\": 5000\n    }\n}\n\n ```\n\n**Bookings - Alice's bookings this month**\n\n``` json\n{\n    \"name\": \"Alice's bookings this month\",\n    \"filters\": {\n        \"consultantName\": \"Alice Miranda\",\n        \"bookingDateStart\": \"2026-03-01\",\n        \"bookingDateEnd\": \"2026-03-31\"\n    }\n}\n\n ```\n\n**Refunds - Pending this month**\n\n``` json\n{\n    \"name\": \"Pending this month\",\n    \"filters\": {\n        \"status\": [\"PENDING\"],\n        \"createdFrom\": \"2026-03-01\",\n        \"createdTo\": \"2026-03-31\"\n    }\n}\n\n ```\n\n**Refunds - iCliGo Portugal pending**\n\n``` json\n{\n    \"name\": \"iCliGo Portugal pending\",\n    \"filters\": {\n        \"status\": [\"PENDING\", \"PROCESSING\"],\n        \"distributionChannels\": [\"iCliGo Portugal\"]\n    }\n}\n\n ```\n\n**Consultants - Active gold level**\n\n``` json\n{\n    \"name\": \"Active gold level\",\n    \"filters\": {\n        \"levels\": [\"GOLD\"],\n        \"userAccountStatus\": [\"ACTIVE\"]\n    }\n}\n\n ```\n\n**Consultants - Suspended commissions**\n\n``` json\n{\n    \"name\": \"Suspended commissions\",\n    \"filters\": {\n        \"commissionDrawStatus\": [\"SUSPENDED\"],\n        \"userAccountStatus\": [\"ACTIVE\"]\n    }\n}\n\n ```\n\n---\n\n### Update a filter group --- REVER (ERRO)\n\n**PUT** `/api/v1/user-preferences/filter-groups/{userId}/{tableId}/{groupId}`\n\n#### Path Parameters\n\n| Parameter | Type | Required | Description |\n| --- | --- | --- | --- |\n| userId | UUID | Yes | The user ID |\n| tableId | String | Yes | The table ID |\n| groupId | String | Yes | The group ID returned from create |\n\n#### Request Body\n\n``` json\n{\n    \"name\": \"Confirmed last 30 days\",\n    \"filters\": {\n        \"bookingState\": \"CONFIRMED\",\n        \"bookingDateStart\": \"2026-02-04\",\n        \"bookingDateEnd\": \"2026-03-06\"\n    }\n}\n\n ```\n\n---\n\n### Delete a filter group\n\n**DELETE** `/api/v1/user-preferences/filter-groups/{userId}/{tableId}/{groupId}`\n\n#### Path Parameters\n\n| Parameter | Type | Required | Description |\n| --- | --- | --- | --- |\n| userId | UUID | Yes | The user ID |\n| tableId | String | Yes | The table ID |\n| groupId | String | Yes | The group ID returned from create |"
+    }
+  ],
+  "variable": [
+    {
+      "id": "84320012-4d61-4b04-bc0a-5acf8948f96c",
+      "key": "base",
+      "value": "http://localhost:9001/kross-reaktor"
+    },
+    {
+      "id": "f6629b20-2c80-42a1-8472-f9ce7fdad345",
+      "key": "tableId",
+      "value": "ops-reaktor:bookings"
+    },
+    {
+      "id": "9699d311-3fc8-4681-a83e-479707b5a7be",
+      "key": "userId",
+      "value": "b67749a7-5e36-4a35-aa7f-a24df6f7a85d"
+    },
+    {
+      "id": "b9ae68ae-f043-41ec-b96b-66523d242bcc",
+      "key": "refundsTable",
+      "value": "ops-reaktor:refunds"
+    }
+  ]
+}
