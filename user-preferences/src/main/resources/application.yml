@@ -16,7 +16,7 @@ spring:
     level:
       org.springframework.data.mongodb.core.MongoTemplate: DEBUG
   mongodb:
-    uri: mongodb://localhost:27017/kross-reaktor-user-preferences?authSource=admin&waitQueueMultiple=1000
+    uri: mongodb://localhost:27018/kross-reaktor?authSource=admin&waitQueueMultiple=1000
     uuid-representation: standard
     auto-index-creation: true
 
